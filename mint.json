@@ -1,6 +1,7 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Starter Kit",
+  "openapi": "openapi.yaml",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -55,6 +56,231 @@
         "introduction",
         "quickstart",
         "development"
+      ]
+    },
+    {
+      "group": "Authentication",
+      "pages": [
+        "authentication/validate-key",
+        "authentication/create-request-token",
+        "authentication/authenticate-request-token",
+        "authentication/create-session",
+        "authentication/create-guest-session"
+      ]
+    },
+    {
+      "group": "Account",
+      "pages": [
+        "account/details",
+        "account/add-favorite",
+        "account/favorite-movies",
+        "account/favorite-tv",
+        "account/lists",
+        "account/rated-movies",
+        "account/rated-tv",
+        "account/rated-tv-episodes",
+        "account/watchlist-movies",
+        "account/watchlist-tv"
+      ]
+    },
+    {
+      "group": "Certifications",
+      "pages": [
+        "certifications/movie-certifications",
+        "certifications/tv-certifications"
+      ]
+    },
+    {
+      "group": "Changes Tracking",
+      "pages": [
+        "changes-tracking/movie-list",
+        "changes-tracking/people-list",
+        "changes-tracking/tv-list"
+      ]
+    },
+    {
+      "group": "Collections",
+      "pages": [
+        "collections/details",
+        "collections/translations"
+      ]
+    },
+    {
+      "group": "Genres",
+      "pages": [
+        "genres/movie-list",
+        "genres/tv-list"
+      ]
+    },
+    {
+      "group": "Configuration",
+      "pages": [
+        "configuration/details",
+        "configuration/countries",
+        "configuration/jobs",
+        "configuration/languages",
+        "configuration/primary-translations",
+        "configuration/timezones"
+      ]
+    },
+    {
+      "group": "Credits",
+      "pages": [
+        "credits/details"
+      ]
+    },
+    {
+      "group": "Discover",
+      "pages": [
+        "discover/movie",
+        "discover/tv"
+      ]
+    },
+    {
+      "group": "Find",
+      "pages": [
+        "find/find-by-id"
+      ]
+    },
+    {
+      "group": "Companies",
+      "pages": [
+        "companies/details",
+        "companies/alternative-names",
+        "companies/images"
+      ]
+    },
+    {
+      "group": "Movie Lists",
+      "pages": [
+        "movie-lists/now-playing",
+        "movie-lists/popular",
+        "movie-lists/top-rated",
+        "movie-lists/upcoming"
+      ]
+    },
+    {
+      "group": "Movies",
+      "pages": [
+        "movies/details",
+        "movies/account-states",
+        "movies/alternative-titles",
+        "movies/changes",
+        "movies/credits",
+        "movies/images",
+        "movies/keywords",
+        "movies/latest",
+        "movies/lists",
+        "movies/recommendations",
+        "movies/release-dates",
+        "movies/reviews",
+        "movies/similar",
+        "movies/translations",
+        "movies/videos"
+      ]
+    },
+    {
+      "group": "Networks",
+      "pages": [
+        "networks/details",
+        "networks/alternative-names",
+        "networks/images"
+      ]
+    },
+    {
+      "group": "People Lists",
+      "pages": [
+        "people-lists/popular"
+      ]
+    },
+    {
+      "group": "People",
+      "pages": [
+        "people/details",
+        "people/changes",
+        "people/combined-credits",
+        "people/external-ids",
+        "people/images",
+        "people/latest",
+        "people/movie-credits",
+        "people/tv-credits",
+        "people/translations"
+      ]
+    },
+    {
+      "group": "Search",
+      "pages": [
+        "search/collection",
+        "search/company",
+        "search/keyword",
+        "search/movie",
+        "search/multi",
+        "search/person",
+        "search/tv"
+      ]
+    },
+    {
+      "group": "Trending",
+      "pages": [
+        "trending/all",
+        "trending/movies",
+        "trending/people",
+        "trending/tv"
+      ]
+    },
+    {
+      "group": "TV Series Lists",
+      "pages": [
+        "tv-series-lists/airing-today",
+        "tv-series-lists/on-the-air",
+        "tv-series-lists/popular",
+        "tv-series-lists/top-rated"
+      ]
+    },
+    {
+      "group": "TV Series",
+      "pages": [
+        "tv-series/details",
+        "tv-series/account-states",
+        "tv-series/aggregate-credits",
+        "tv-series/alternative-titles",
+        "tv-series/changes",
+        "tv-series/content-ratings",
+        "tv-series/credits",
+        "tv-series/episode-groups"
+      ]
+    },
+    {
+      "group": "TV Seasons",
+      "pages": [
+        "tv-seasons/details",
+        "tv-seasons/account-states",
+        "tv-seasons/aggregate-credits",
+        "tv-seasons/changes",
+        "tv-seasons/credits"
+      ]
+    },
+    {
+      "group": "TV Episodes",
+      "pages": [
+        "tv-episodes/details",
+        "tv-episodes/account-states",
+        "tv-episodes/changes",
+        "tv-episodes/credits"
+      ]
+    },
+    {
+      "group": "Watch Providers",
+      "pages": [
+        "watch-providers/available-regions",
+        "watch-providers/movie-providers",
+        "watch-providers/tv-providers"
+      ]
+    },
+    {
+      "group": "Keywords",
+      "pages": [
+        "keywords/details"
       ]
     },
     {
