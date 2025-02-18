@@ -3,135 +3,21 @@ title: "Authentication"
 description: "Learn how to authenticate requests using API keys and session-based authentication in the TMDB API."
 ---
 
-# Authentication
+## API Key Authentication (For Basic Requests)
 
-To interact with the TMDB API, you must authenticate requests using either an **API key** or a **session-based workflow** for user-specific actions.
+Application level authentication would generally be considered the default way of authenticating yourself on the API. Version 3 is controlled by one of either a single query parameter, api_key, or by using your access token as a Bearer token.
 
-## 1. API Key Authentication (For Basic Requests)
+You can request an API key by logging in to your account on TMDB.
 
-If you only need to retrieve public movie data, you can use your API key in requests.
+### Bearer Token
 
-### API Key in Query Parameters
+The default method to authenticate is with your access token. If you head into your account page, under the API settings section, you will see a new token listed called **_API Read Access Token_**. This token is expected to be sent along as an Authorization header as seen below. A simple cURL example using this method looks like the following:
 
-```plaintext
-https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY
+```cURL
+
+curl --request GET \
+     --url 'https://api.themoviedb.org/3/movie/11' \
+     --header 'Authorization: Bearer ACCESS_TOKEN'
 ```
 
-### API Key in Request Headers:
-
-```js
-Authorization: Bearer YOUR_ACCESS_TOKEN
-```
-
-## 2. User Authentication (For Actions Requiring a Session)
-
-To perform actions like rating a movie, adding to a watchlist, or creating a favorite list, you need a session ID.
-
-### Step 1: Create a Request Token
-
-First, request a temporary request token. This token expires after 60 minutes if not used.
-
-Endpoint:
-
-```
-POST /authentication/token/new
-```
-
-Example Request:
-
-```plaintext
-https://api.themoviedb.org/3/authentication/token/new?api_key=YOUR_API_KEY
-```
-
-Example Response:
-
-```json
-{
-  "success": true,
-  "expires_at": "2025-02-12 10:30:00 UTC",
-  "request_token": "123456abcdef"
-}
-```
-
-### Step 2: Ask the User for Permission
-
-Redirect the user to the following URL to approve your request token:
-
-```plaintext
-https://www.themoviedb.org/authenticate/{REQUEST_TOKEN}
-```
-
-If you want to redirect the user back to your app after approval, append redirect_to:
-
-```plaintext
-https://www.themoviedb.org/authenticate/{REQUEST_TOKEN}?redirect_to=http://www.yourapp.com/approved
-```
-
-Once approved, the request token is now authorized for the next step.
-
-### Step 3: Create a Session ID
-
-After the user approves the request token, you must exchange it for a session ID.
-
-Endpoint:
-
-```
-POST /authentication/session/new
-```
-
-Example Request:
-
-```plaintext
-https://api.themoviedb.org/3/authentication/session/new?api_key=YOUR_API_KEY
-```
-
-Request Body:
-
-```json
-{
-  "request_token": "123456abcdef"
-}
-```
-
-Example Response:
-
-```json
-{
-  "success": true,
-  "session_id": "789xyz"
-}
-```
-
-Use this session_id for user-authenticated API actions.
-
-## 3. Guest Sessions (For Rating Without an Account)
-
-If you want to allow users to rate movies without signing in, you can create a guest session.
-
-Endpoint:
-
-```
-GET /authentication/guest_session/new
-```
-
-Example Request:
-
-```plaintext
-https://api.themoviedb.org/3/authentication/guest_session/new?api_key=YOUR_API_KEY
-```
-
-Example Response:
-
-```json
-{
-  "success": true,
-  "guest_session_id": "abcd1234",
-  "expires_at": "2025-02-12 12:00:00 UTC"
-}
-```
-
-## Conclusion
-
-TMDB provides API Key authentication for general data access and Session-based authentication for user-specific actions. Use the appropriate method based on your needs.
-
-For more details, refer to the [TMDB Authentication Guide](https://developer.themoviedb.org/reference/authentication-how-do-i-generate-a-session-id).
+Using the Bearer token has the added benefit of being a single authentication process that you can use across both the v3 and v4 methods.

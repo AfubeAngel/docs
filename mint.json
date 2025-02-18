@@ -53,15 +53,16 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction"
+        "introduction",
+        "authorization"
       ]
     },
     {
       "group": "Authentication",
       "pages": [
-        "auth (Basic Request)",
+        "auth",
         "User",
-        "Guest Session"
+        "Guest"
       ]
     },
     {

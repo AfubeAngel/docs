@@ -1,0 +1,36 @@
+---
+title: "Guest Authentication"
+description: "Use this session_id for actions requiring a Guest Session-authenticated API action."
+---
+
+# Guest Sessions (For Rating Without an Account)
+
+Example: If you want to allow users to rate movies without signing in, you can create a guest session.
+
+Endpoint:
+
+```
+GET /authentication/guest_session/new
+```
+
+Example Request:
+
+```plaintext
+https://api.themoviedb.org/3/authentication/guest_session/new?api_key=YOUR_API_KEY
+```
+
+Example Response:
+
+```json
+{
+  "success": true,
+  "guest_session_id": "abcd1234",
+  "expires_at": "2025-02-12 12:00:00 UTC"
+}
+```
+
+## Conclusion
+
+TMDB provides API Key authentication for general data access and Session-based authentication for user-specific actions. Use the appropriate method based on your needs.
+
+For more details, refer to the [TMDB Authentication Guide](https://developer.themoviedb.org/reference/authentication-how-do-i-generate-a-session-id).
