@@ -54,7 +54,8 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "authorization"
+        "authorization",
+        "faq"
       ]
     },
     {

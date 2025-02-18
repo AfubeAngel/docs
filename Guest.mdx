@@ -5,7 +5,9 @@ description: "Use this session_id for actions requiring a Guest Session-authenti
 
 # Guest Sessions (For Rating Without an Account)
 
-Example: If you want to allow users to rate movies without signing in, you can create a guest session.
+Guest sessions are a second type of user authentication. They have limited permissions as they can only rate a movie, TV show and TV episode. Creating a guest session is as simple as calling the new guest session method.
+
+Just like a fully authorized user session, guest sessions should be kept private as they tie a session within your application to a single token.
 
 Endpoint:
 
