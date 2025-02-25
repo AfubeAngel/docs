@@ -64,7 +64,7 @@ Changes will be deployed to production automatically after pushing to the defaul
 
 
 ## **🔗 Live API Documentation**  
-📌 **Mintlify Docs:** [🔗 View Here](#https://angel.mintlify.app/introduction) *(replace with actual link when deployed)*  
+📌 **Mintlify Docs:** [🔗 View Here](https://angel.mintlify.app/introduction)
  
 
 
