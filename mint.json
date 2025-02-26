@@ -1,9 +1,9 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "TMDB Recreation",
   "openapi": "openapi.yaml",
   "logo": {
-    "dark": "/logo/dark.svg",
+    "dark": "/images/image.png",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
