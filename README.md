@@ -19,7 +19,7 @@ This project involves **exploring, documenting, and recreating The Movie Databas
 
 ## **🛠️ Tech Stack**  
 - **Postman** – API request testing & documentation  
-- **Swagger,io** – Standardized API documentation  
+- **Swagger.io** – Standardized API documentation  
 - **Mintlify** – Modern and interactive API documentation platform  
 
 <br>
@@ -71,7 +71,9 @@ Changes will be deployed to production automatically after pushing to the defaul
 
 ## **🔗 Live API Documentation**  
 📌 **Mintlify Docs:** [🔗 View Here](https://angel.mintlify.app/introduction)
- 
+
+ ![MIntlify homepage](https://github.com/user-attachments/assets/735bfbce-af11-4966-9a0e-57b09e6912af)
+
 
 
 
